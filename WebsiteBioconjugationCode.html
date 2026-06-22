@@ -6,12 +6,12 @@
     <title>Bioconjugation: Next-Gen Therapeutics | TSA Team 1173-1</title>
     <style>
         :root {
-            --primary: #0a192f;
-            --secondary: #172a45;
-            --accent: #00b4d8;
-            --accent-glow: rgba(0, 180, 216, 0.2);
-            --text-main: #f8f9fa;
-            --text-muted: #a8b2d1;
+            --primary: #074258;
+            --secondary: #010f22;
+            --accent: #e66b00;
+            --accent-glow: rgba(193, 109, 0, 0.69);
+            --text-main: #e78300;
+            --text-muted: #fbb902;
             --bg-light: #ffffff;
             --card-bg: #112240;
         }
@@ -114,10 +114,25 @@
             margin: 2rem 0 1rem 0;
         }
 
+        h3 {
+            color: var(--text-main);
+        }
+
         p {
             color: var(--text-muted);
             margin-bottom: 1.2rem;
             font-size: 1.1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
         }
 
         .grid-2 {
@@ -144,6 +159,37 @@
         .card h3 {
             color: var(--text-main);
             margin-bottom: 0.5rem;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .stat-row { grid-template-columns: 1fr 1fr; }
+        }
+
+        .stat-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-box .num {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .stat-box .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         .video-container {
@@ -278,6 +324,11 @@
             100% { left: 100%; }
         }
 
+        .ref-card p {
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -310,43 +361,118 @@
 
         <section id="home" class="page active">
             <h1>Bioconjugation Architecture: <span>The Future of Targeted Medicine</span></h1>
-            <p>Welcome to Team 1173-1's scientific portal. Modern biotechnology represents a profound shift from passive observation to high-precision manipulation of biological pathways.</p>
-            
+            <p>Welcome to Team 1173-1's scientific portal. Modern biotechnology represents a profound shift from passive observation to high-precision manipulation of biological pathways. Technologies such as CRISPR gene editing can achieve up to 90-99% accuracy, while treatments like CAR-T therapy have produced remission rates near 80-90% in certain cancer patients, and mRNA vaccines moved from concept to deployment in under a year. Despite this, only about 10-15% of drugs that enter clinical trials are ultimately approved, and many advanced therapies cost over $100,000 per patient. Reliability, cost, and real-world effectiveness remain major open problems.</p>
+
             <div class="card">
                 <h3>Our Core Project Focus</h3>
-                <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines.</p>
+                <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines. Our proposal will aid in preventing addictive substances like fentanyl, heroin, and oxycodone from crossing the blood-brain barrier and triggering addiction or overdose.</p>
             </div>
 
             <h2>Multimedia Showcase Presentation</h2>
             <div class="video-container">
-                <iframe src="https://www.canva.com/design/DAF_example/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+                <iframe src="https://www.canva.com/design/DAHNQlsyFnI/6UdvTh5R9yXSDnZ2mif4cA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
             </div>
         </section>
 
         <section id="mission" class="page">
             <h1>Our <span>Mission Statement</span></h1>
             <div class="card">
-                <p style="font-size: 1.4rem; font-style: italic; color: var(--text-main);">"To engineer high-precision, low-cost biochemical safeguards that defend biological functions against disruptive synthetic chemicals."</p>
+                <p style="font-size: 1.4rem; font-style: italic; color: var(--text-main);">"To engineer high-precision, low-cost biochemical safeguards that defend biological functions against disruptive synthetic chemicals, redefining recovery through proactive immunotherapeutic solutions."</p>
             </div>
+
+            <h2>The Problem We're Addressing</h2>
+            <p>Biotechnology is the use of living systems, cells, DNA, and organisms, to create useful products like medicine, food, and sustainable materials. Despite rapid progress, several key problems remain: simulated research can model biological systems, but real-world results often differ, and many advanced treatments are too expensive or move too fast for long-term safety data to catch up.</p>
+
+            <div class="stat-row">
+                <div class="stat-box"><span class="num">10-15%</span><span class="label">of clinical trial drugs are approved</span></div>
+                <div class="stat-box"><span class="num">$100,000+</span><span class="label">cost per patient for some therapies</span></div>
+                <div class="stat-box"><span class="num">90-99%</span><span class="label">accuracy achievable with CRISPR editing</span></div>
+                <div class="stat-box"><span class="num">$1 trillion+</span><span class="label">size of the global biotech industry</span></div>
+            </div>
+
+            <h2>Project Criteria Goals</h2>
+            <ul>
+                <li><strong>Validation:</strong> Synthesize complex bioconjugation concepts into direct mechanics digestible for clinical applications.</li>
+                <li><strong>Scalability:</strong> Propose manufacturing strategies that lower operational costs relative to traditional long-term addiction treatments.</li>
+                <li><strong>Axiology:</strong> Safely preserve native molecule systems while appending advanced targeted behavior.</li>
+            </ul>
         </section>
 
         <section id="bioconjugation" class="page">
             <h1>The Science of <span>Bioconjugation</span></h1>
-            <p>Bioconjugation is a cross-disciplinary biochemical technique that chemically links a biomolecule to another component via stable covalent bonds.</p>
+            <p>Bioconjugation is a cross-disciplinary biochemical technique that chemically links a biomolecule (such as a protein, antibody, or enzyme) to another component (such as a synthetic drug, nanoparticle, or fluorophore) via stable covalent bonds, strong bonds formed by sharing electrons between atoms. This differs from weaker, reversible bonds like hydrogen bonds or electrostatic attractions, which can be disrupted by changes in temperature, pH, or salinity.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Covalent Integration</h3>
+                    <p>Scientists target reactive amino acid residues on proteins, such as lysine, cysteine, tyrosine, or glutamate, because their chemical groups easily form bonds with other molecules. This lets engineers attach synthetic elements without damaging the protein's underlying tertiary structure.</p>
+                </div>
+                <div class="card">
+                    <h3>Chemical Linkers & Crosslinkers</h3>
+                    <p>Linkers act as structural bridges that must remain stable in flowing blood to ensure a payload reaches its destination intact. EDC is a "zero-length" crosslinker, while heterobifunctional crosslinkers like SMCC carry two different reactive groups, allowing sequential, controlled conjugation between two distinct molecules.</p>
+                </div>
+            </div>
+
+            <h2>Key Concepts Behind the Chemistry</h2>
+            <ul>
+                <li><strong>Functional groups:</strong> amines, carboxyls, thiols, and hydroxyls are the chemical "handles" most conjugation reactions target.</li>
+                <li><strong>Site-specific vs. random conjugation:</strong> random conjugation attaches molecules at many possible sites, while site-specific conjugation attaches at one precise location — better preserving biological activity.</li>
+                <li><strong>Physiological constraints:</strong> nearly all bioconjugation reactions must occur near neutral pH (7.2–7.5) and at 25–37°C in aqueous solution, since the biological molecule will unfold and lose function if exposed to organic solvents, extreme temperatures, or harsh acids.</li>
+                <li><strong>Bioorthogonal chemistry:</strong> reactions like the azide-alkyne "click" reaction occur selectively between engineered molecules without interfering with the body's normal biological processes — allowing scientists to label proteins, track biomolecules, and activate drugs inside living tissue.</li>
+            </ul>
+
+            <h2>Common Real-World Applications</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Targeted Drug Delivery (ADCs)</h3>
+                    <p>Antibody-drug conjugates link a cytotoxic drug to an antibody that recognizes cancer-cell surface markers, delivering the drug only where needed (e.g., Kadcyla, Brentuximab vedotin).</p>
+                </div>
+                <div class="card">
+                    <h3>Medical Diagnostics</h3>
+                    <p>Antibodies conjugated to gold nanoparticles or enzymes produce visible or measurable signals — the basis of COVID-19 antigen tests, pregnancy tests, and ELISA lab assays.</p>
+                </div>
+                <div class="card">
+                    <h3>Vaccine Development</h3>
+                    <p>Linking polysaccharides or haptens to carrier proteins triggers a stronger, T-cell-dependent immune response — the same principle behind meningitis and pneumonia vaccines, and our anti-drug vaccine.</p>
+                </div>
+                <div class="card">
+                    <h3>Gene Therapy & CRISPR Delivery</h3>
+                    <p>Conjugating cell-penetrating peptides or stabilizing polymers to Cas9 and guide RNA helps these large, fragile molecules cross cell membranes and resist degradation.</p>
+                </div>
+            </div>
         </section>
 
         <section id="solution" class="page">
             <h1>The Solution: <span>Immunotherapeutic Shielding</span></h1>
-            <p>Our approach shifts the timeline entirely by introducing structural defenses before toxins can interact with neural reward centers.</p>
+            <p>Traditional recovery frameworks focus primarily on psychiatric or neurological interventions after a chemical substance has already bound to neural reward pathways. Our approach shifts the timeline entirely — intercepting the drug before it ever reaches the brain.</p>
+
+            <div class="card">
+                <h3>The Anti-Drug Vaccine Model</h3>
+                <p>Drugs like fentanyl are too small to trigger an immune response on their own. We use a modified version of the drug called a <strong>hapten</strong>, chemically attached to a larger carrier protein (such as CRM197 or KLH) through bioconjugation. This combined structure is immunogenic, so the immune system recognizes it as a threat and produces drug-specific antibodies. If the real drug later enters the bloodstream, these antibodies bind to it and form a complex too large to cross the blood-brain barrier — blocking the drug's rewarding and harmful effects and reducing the risk of addiction and overdose. Over time, processes such as the glymphatic system contribute to clearing these bound drug-antibody complexes from the body.</p>
+            </div>
+
+            <h2>Why Not Antibody-Drug Conjugates (ADCs)?</h2>
+            <p>Targeted drug delivery using ADCs is highly effective in cancer treatment, but we did not choose this strategy for addiction. ADCs deliver a drug into specific cells marked by unique surface antigens — useful when harmful cells can be clearly identified. Addictive substances like fentanyl, however, do not act on a single cell type; they rapidly affect the entire brain, and there is no comparable surface marker to target on a freely circulating small molecule.</p>
+            <p>Our goal isn't to deliver a substance to a target — it's to prevent a substance from reaching its target in the first place. The anti-drug vaccine works systemically, neutralizing the drug directly in the bloodstream, which makes it a better-aligned, more preventative strategy for addiction and overdose than targeted delivery methods.</p>
         </section>
 
         <section id="how-it-works" class="page">
             <h1>Mechanism <span>of Action</span></h1>
-            <p>How a bioconjugated vaccine alters pharmacological profiles in real time.</p>
+            <p>How does a bioconjugated vaccine alter pharmacological profiles in real time?</p>
+            <ol>
+                <li><strong>Conjugation:</strong> A hapten (drug-like molecule) is covalently attached to an immunogenic carrier protein via a chemical linker, since small-molecule drugs alone are too small to be recognized by the immune system.</li>
+                <li><strong>Inoculation:</strong> The conjugate is mixed with an adjuvant (immune booster) and administered as a vaccine.</li>
+                <li><strong>Antibody Proliferation:</strong> B-cells recognize the carrier protein matrix and construct custom-tailored, high-affinity antibodies against the drug.</li>
+                <li><strong>Vascular Interception:</strong> If the target drug later enters the body, these antibodies immediately surround and bind to it in the bloodstream.</li>
+                <li><strong>Steric Hindrance:</strong> The combined antibody-drug complex is physically too massive to cross the tight junctions of the Blood-Brain Barrier (BBB), keeping the substance out of the central nervous system and neutralizing its psychoactive and dangerous effects (including respiratory depression).</li>
+                <li><strong>Clearance:</strong> Bound drug-antibody complexes are gradually cleared from the body, with processes such as the glymphatic system contributing to removal of substances from the central nervous system.</li>
+            </ol>
         </section>
 
         <section id="demo" class="page">
             <h1>Interactive <span>Laboratory Simulator</span></h1>
+            <p>Step directly into the shoes of a biomedical lead engineer. Use this simulation console to assemble, deliver, and test a conjugated anti-drug vaccine formula on a cellular model.</p>
+
             <div class="sim-box">
                 <div class="sim-header">
                     <h3>Bioconjugate Operations Lab</h3>
@@ -366,34 +492,57 @@
 
         <section id="impacts" class="page">
             <h1>Global <span>Impact Analysis</span></h1>
-            <p>Reviewing the socioeconomic and ethical boundaries of preventative bioconjugation deployments.</p>
+            <p>Bioconjugation-based anti-drug vaccines are being actively researched as a tool to address opioid and stimulant addiction. Once formed, drug-specific antibodies circulate in the bloodstream and bind to molecules such as fentanyl, heroin, or cocaine before they can reach the brain, preventing the reinforcing or euphoric effects that drive addiction.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Socioeconomic Benefits</h3>
+                    <p>Unlike treatments requiring daily dosing or supervision, a vaccine-based approach could offer longer-lasting immunity by maintaining antibody levels over time. This is especially relevant to the ongoing opioid crisis, where overdoses occur rapidly after exposure — reducing emergency overdose cases could meaningfully lower pressure on healthcare systems and recurring treatment costs.</p>
+                </div>
+                <div class="card">
+                    <h3>Complement, Not Replacement</h3>
+                    <p>This approach is being studied as a complement to existing treatments like medication-assisted therapy and behavioral counseling, and could be especially valuable for individuals at high risk of relapse, providing long-term biological protection against drug effects.</p>
+                </div>
+            </div>
+
+            <h2>Ethical Horizons</h2>
+            <p>Transitioning into preventative biochemistry requires intentional conversations concerning voluntary administration rights, standard distribution channels, and patient choice autonomy. Although these vaccines are still in development and not yet widely available, they represent a growing area of translational medicine with strong potential for future clinical use.</p>
         </section>
 
         <section id="references" class="page">
             <h1>Scientific <span>Literature Citations</span></h1>
-            <div class="card" style="font-family: monospace; font-size: 0.95rem;">
-                <p>* National Center for Biotechnology Information. "Vaccines to Combat the Opioid Crisis." 2017.</p>
+            <div class="card ref-card">
+                <p>Wang, Lei, et al. "Glymphatic-System Function Is Associated with Addiction and Relapse in Heroin Dependents Undergoing Methadone Maintenance Treatment." National Library of Medicine, 7 Sept. 2023, PMC10526898.</p>
+                <p>Singh KV, Kaur J, Varshney GC, Raje M, Suri CR. "Synthesis and characterization of hapten-protein conjugates for antibody production against small molecules." Bioconjug Chem. 2004 Jan-Feb;15(1):168-73. PMID: 14733597.</p>
+                <p>"Biotechnology and Synthetic Biology." Stanford Emerging Technology Review, Stanford University, 2025.</p>
+                <p>"Immunotherapies for the Treatment of Drug Addiction." National Center for Biotechnology Information, U.S. National Library of Medicine, 2022, PMC9697687.</p>
+                <p>"Vaccines to Combat the Opioid Crisis." National Center for Biotechnology Information, U.S. National Library of Medicine, 2017, PMC5757212.</p>
+                <p>"Development of Vaccines to Treat Opioid Use Disorders and Reduce Incidence of Overdose." National Center for Biotechnology Information, U.S. National Library of Medicine, 2019, PMC6919211.</p>
+                <p>"Vaccines Against Drug Abuse." PubMed, U.S. National Library of Medicine, 2012, PMID 22130115.</p>
+                <p>"Conjugate Vaccine Immunotherapy for Substance Use Disorder." ScienceDirect, Elsevier, 2024, S0031699724012286.</p>
+                <p>"Next-Generation Vaccines for Substance Use Disorders." National Center for Biotechnology Information, U.S. National Library of Medicine, 2024, PMC11188595.</p>
+                <p>"Introduction and Background: New Treatments for Addiction." National Academies Press (NCBI Bookshelf).</p>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 TSA High School Biotechnology Design Championship | Chapter ID: 1173</p>
+        <p>&copy; 2026 TSA High School Biotechnology Design Championship | Chapter ID: 1173-1</p>
     </footer>
 
     <script>
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
-            
+
             document.getElementById(pageId).classList.add('active');
             document.getElementById('btn-' + pageId).classList.add('active');
             window.scrollTo(0,0);
         }
 
         let selectedCarrier = "";
-        
+
         function selectOption(btn, value) {
             document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
@@ -415,7 +564,7 @@
                     <p style="color:#ffffff; font-weight:bold;">Successfully bound vaccine using ${selectedCarrier}.</p>
                     <button class="sim-btn" onclick="advanceSimulation(2)">Administer Injection</button>
                 `;
-            } 
+            }
             else if(currentStep === 2) {
                 stage.innerText = "PHASE 3: Opioid Exposure Challenge";
                 animBox.style.display = "block";
