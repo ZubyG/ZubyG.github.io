@@ -29,7 +29,6 @@
             line-height: 1.6;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: var(--secondary);
             position: fixed;
@@ -84,7 +83,6 @@
             box-shadow: 0 0 10px var(--accent-glow);
         }
 
-        /* Content Sections */
         .container {
             max-width: 1100px;
             margin: 100px auto 40px auto;
@@ -93,16 +91,10 @@
 
         .page {
             display: none;
-            animation: fadeIn 0.5s ease-in-out forwards;
         }
 
         .page.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -141,7 +133,6 @@
             .container { margin-top: 160px; }
         }
 
-        /* Professional Cards */
         .card {
             background-color: var(--card-bg);
             border-left: 4px solid var(--accent);
@@ -155,11 +146,10 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Canva Embedded Section */
         .video-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-top: 56.25%;
             margin: 2rem 0;
             border-radius: 8px;
             overflow: hidden;
@@ -175,7 +165,6 @@
             border: 0;
         }
 
-        /* Gizmos-Style Simulation Game Style rules */
         .sim-box {
             background-color: var(--secondary);
             border: 2px solid var(--accent);
@@ -250,7 +239,6 @@
             background: var(--accent-glow);
         }
 
-        /* Microscopic Blood Stream Animation Simulation Assets */
         .vessel-view {
             width: 100%;
             height: 120px;
@@ -263,7 +251,7 @@
         }
 
         .vessel-view::before {
-            content: "Blood-Brain Barrier (BBB)";
+            content: "Blood-Brain Barrier";
             position: absolute;
             right: 20px;
             top: 0;
@@ -290,7 +278,6 @@
             100% { left: 100%; }
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -323,16 +310,14 @@
 
         <section id="home" class="page active">
             <h1>Bioconjugation Architecture: <span>The Future of Targeted Medicine</span></h1>
-            <p>Welcome to Team 1173-1's scientific portal. Modern biotechnology represents a profound shift from passive observation to high-precision manipulation of biological pathways. By blending molecular biochemistry with engineering rules, we can target global health crises at their roots.</p>
+            <p>Welcome to Team 1173-1's scientific portal. Modern biotechnology represents a profound shift from passive observation to high-precision manipulation of biological pathways.</p>
             
             <div class="card">
                 <h3>Our Core Project Focus</h3>
-                <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines—preventing addictive substances from crossing the blood-brain barrier.</p>
+                <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines.</p>
             </div>
 
             <h2>Multimedia Showcase Presentation</h2>
-            <p>Review our comprehensive digital dynamic briefing below. This window links continuously to our live architectural slides:</p>
-            
             <div class="video-container">
                 <iframe src="https://www.canva.com/design/DAF_example/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
             </div>
@@ -341,108 +326,63 @@
         <section id="mission" class="page">
             <h1>Our <span>Mission Statement</span></h1>
             <div class="card">
-                <p style="font-size: 1.4rem; font-style: italic; color: var(--text-main);">"To engineer high-precision, low-cost biochemical safeguards that defend biological functions against disruptive synthetic chemicals, redefining recovery through proactive immunotherapeutic solutions."</p>
+                <p style="font-size: 1.4rem; font-style: italic; color: var(--text-main);">"To engineer high-precision, low-cost biochemical safeguards that defend biological functions against disruptive synthetic chemicals."</p>
             </div>
-            <h2>Project Criteria Goals</h2>
-            <ul>
-                <li><strong>Validation:</strong> Synthesize complex bioconjugation concepts into direct mechanics digestible for clinical applications.</li>
-                <li><strong>Scalability:</strong> Propose manufacturing strategies that lower operational costs relative to traditional long-term addiction treatments.</li>
-                <li><strong>Axiology:</strong> Safely preserve native molecule systems while appending advanced targeted behavior.</li>
-            </ul>
         </section>
 
         <section id="bioconjugation" class="page">
             <h1>The Science of <span>Bioconjugation</span></h1>
-            <p>Bioconjugation is a cross-disciplinary biochemical technique that chemically links a biomolecule (such as a functional protein, antibody, or enzyme) to another component (such as a synthetic drug, nanoparticle, or fluorophore) via stable covalent bonds.</p>
-            
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Covalent Integration</h3>
-                    <p>By targeting highly reactive amino acid residues (such as Lysine or Cysteine), engineers can attach structural synthetic elements without damaging the underlying tertiary shape of the host protein.</p>
-                </div>
-                <div class="card">
-                    <h3>Chemical Linkers</h3>
-                    <p>Linkers act as specialized structural bridges. They must remain exceptionally stable within fluid blood systems to guarantee the target payload payload safely reaches its destination intact.</p>
-                </div>
-            </div>
+            <p>Bioconjugation is a cross-disciplinary biochemical technique that chemically links a biomolecule to another component via stable covalent bonds.</p>
         </section>
 
         <section id="solution" class="page">
             <h1>The Solution: <span>Immunotherapeutic Shielding</span></h1>
-            <p>Traditional recovery frameworks focus primarily on psychiatric or neurological interventions after a chemical substance has already bound to neural reward paths. Our approach shifts the timeline entirely.</p>
-            <div class="card">
-                <h3>The Anti-Drug Vaccine Model</h3>
-                <p>By linking small, unreactive addictive molecules (haptens derived from substances like Fentanyl or Heroin) to robust exogenous carrier proteins, we teach the human immune system to identify these drugs as hazardous invaders.</p>
-            </div>
-            <p>The resulting production of specialized antibodies actively neutralizes small molecules directly inside vascular systems, transforming the body's natural defenses into a systemic shield.</p>
+            <p>Our approach shifts the timeline entirely by introducing structural defenses before toxins can interact with neural reward centers.</p>
         </section>
 
         <section id="how-it-works" class="page">
             <h1>Mechanism <span>of Action</span></h1>
-            <p>How does a bioconjugated vaccine alter pharmacological profiles in real time?</p>
-            <ol style="margin-left: 2rem; color: var(--text-muted); font-size: 1.1rem;">
-                <li style="margin-bottom: 0.5rem;"><strong>Inoculation:</strong> The patient receives the bioconjugated immunogen formula.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>Antibody Proliferation:</strong> B-cells recognize the carrier protein matrix and construct custom-tailored, high-affinity antibodies.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>Vascular Interception:</strong> If a target synthetic drug enters the body, those customized antibodies immediately surround and latch onto it.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>Steric Hindrance:</strong> The combined antibody-drug complex is physically too massive to slip past cellular tight junctions in the Blood-Brain Barrier (BBB), keeping the toxin completely out of the central nervous system.</li>
-            </ol>
+            <p>How a bioconjugated vaccine alters pharmacological profiles in real time.</p>
         </section>
 
         <section id="demo" class="page">
             <h1>Interactive <span>Laboratory Simulator</span></h1>
-            <p>Step directly into the shoes of a biomedical lead engineer. Use this simulation console to assemble, deliver, and test a conjugated anti-drug vaccine formula on a cellular model.</p>
-
             <div class="sim-box">
                 <div class="sim-header">
                     <h3>Bioconjugate Operations Lab</h3>
                     <span class="sim-stage" id="stage-indicator">PHASE 1: Molecular Assembly</span>
                 </div>
-                
                 <div class="sim-body" id="sim-content">
                     <p id="sim-text">Select a highly stable, immunogenic carrier protein to serve as your therapeutic structural base:</p>
                     <div class="interactive-options" id="sim-options">
                         <button class="opt-btn" onclick="selectOption(this, 'CRM197')">CRM197 Carrier Protein</button>
-                        <button class="opt-btn" onclick="selectOption(this, 'KLH')">KLH (Keyhole Limpet Hemocyanin)</button>
+                        <button class="opt-btn" onclick="selectOption(this, 'KLH')">KLH Carrier Protein</button>
                     </div>
                     <button class="sim-btn" onclick="advanceSimulation(1)">Link & Conjugate</button>
                 </div>
-
-                <div class="vessel-view" id="vessel-animation">
-                    </div>
+                <div class="vessel-view" id="vessel-animation"></div>
             </div>
         </section>
 
         <section id="impacts" class="page">
             <h1>Global <span>Impact Analysis</span></h1>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Socioeconomic Benefits</h3>
-                    <p>Successfully deployed bioconjugates significantly lower recurring healthcare expenditures, mitigate relapses, and decrease dependencies on institutional emergency medical care pipelines.</p>
-                </div>
-                <div class="card">
-                    <h3>Ethical Horizons</h3>
-                    <p>Transitioning into preventative biochemistry requires intentional conversations concerning voluntary administration rights, standard distribution channels, and patient choice autonomy.</p>
-                </div>
-            </div>
+            <p>Reviewing the socioeconomic and ethical boundaries of preventative bioconjugation deployments.</p>
         </section>
 
         <section id="references" class="page">
             <h1>Scientific <span>Literature Citations</span></h1>
             <div class="card" style="font-family: monospace; font-size: 0.95rem;">
-                <p>* National Center for Biotechnology Information. "Vaccines to Combat the Opioid Crisis." U.S. National Library of Medicine, 2017. PMC5757212.</p>
-                <p>* ScienceDirect, Elsevier. "Conjugate Vaccine Immunotherapy for Substance Use Disorder." 2024. S0031699724012286.</p>
-                <p>* National Center for Biotechnology Information. "Development of Vaccines to Treat Opioid Use Disorders." U.S. National Library of Medicine, 2019. PMC6919211.</p>
+                <p>* National Center for Biotechnology Information. "Vaccines to Combat the Opioid Crisis." 2017.</p>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 TSA High School Biotechnology Design Championship | Chapter ID: 1173 | Chantilly High School</p>
+        <p>&copy; 2026 TSA High School Biotechnology Design Championship | Chapter ID: 1173</p>
     </footer>
 
     <script>
-        // Page Router Logic
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.querySelectorAll('.nav-links button').forEach(btn => btn.classList.remove('active'));
@@ -452,7 +392,6 @@
             window.scrollTo(0,0);
         }
 
-        // Game State Variables
         let selectedCarrier = "";
         
         function selectOption(btn, value) {
@@ -473,29 +412,25 @@
                 }
                 stage.innerText = "PHASE 2: Immunization Delivery";
                 body.innerHTML = `
-                    <p style="color:#ffffff; font-weight:bold;">Successfully bound vaccine using ${selectedCarrier} base structural linkers.</p>
-                    <p>The bioconjugated immunogen configuration is verified. Administer the compound into the bloodstream to trigger systemic antibody development.</p>
+                    <p style="color:#ffffff; font-weight:bold;">Successfully bound vaccine using ${selectedCarrier}.</p>
                     <button class="sim-btn" onclick="advanceSimulation(2)">Administer Injection</button>
                 `;
             } 
             else if(currentStep === 2) {
                 stage.innerText = "PHASE 3: Opioid Exposure Challenge";
                 animBox.style.display = "block";
-                generateParticles('#00b4d8', 12); // Vaccine antibodies loading
-                
+                generateParticles('#00b4d8', 12);
                 body.innerHTML = `
-                    <p style="color:#48cae4;">Vaccine deployed! Antibodies are actively circulating inside the plasma.</p>
-                    <p>Simulating an exposure challenge to small-molecule narcotics (e.g., Fentanyl). Watch the systemic interception process execute below:</p>
+                    <p style="color:#48cae4;">Vaccine deployed! Antibodies are actively circulating.</p>
                     <button class="sim-btn" style="background:#f72585; color:white;" onclick="advanceSimulation(3)">Introduce Drug Particles</button>
                 `;
             }
             else if(currentStep === 3) {
-                stage.innerText = "SIMULATION COMPLETE: System Protected";
-                generateParticles('#f72585', 8); // Drug particles entering stream
-                
+                stage.innerText = "SIMULATION COMPLETE";
+                generateParticles('#f72585', 8);
                 body.innerHTML = `
                     <h3 style="color:#00b4d8; margin-bottom:1rem;">Steric Hindrance Achieved!</h3>
-                    <p><strong>Result Analysis:</strong> Synthetic opioid molecules were instantly cross-bound by the heavy bioconjugate-induced antibodies. The enlarged complexes cannot traverse the blood-brain barrier tight junctions, preventing neural respiratory center failure.</p>
+                    <p>The molecular complexes cannot traverse the blood-brain barrier tight junctions.</p>
                     <button class="sim-btn" onclick="resetSim()">Restart Research Lab</button>
                 `;
             }
@@ -517,18 +452,8 @@
             selectedCarrier = "";
             document.getElementById('vessel-animation').style.display = "none";
             document.getElementById('vessel-animation').innerHTML = "";
-            const body = document.getElementById('sim-content');
-            const stage = document.getElementById('stage-indicator');
-            
-            stage.innerText = "PHASE 1: Molecular Assembly";
-            body.innerHTML = `
-                <p id="sim-text">Select a highly stable, immunogenic carrier protein to serve as your therapeutic structural base:</p>
-                <div class="interactive-options" id="sim-options">
-                    <button class="opt-btn" onclick="selectOption(this, 'CRM197')">CRM197 Carrier Protein</button>
-                    <button class="opt-btn" onclick="selectOption(this, 'KLH')">KLH (Keyhole Limpet Hemocyanin)</button>
-                </div>
-                <button class="sim-btn" onclick="advanceSimulation(1)">Link & Conjugate</button>
-            `;
+            advanceSimulation(0);
+            location.reload();
         }
     </script>
 </body>
