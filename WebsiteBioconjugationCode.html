@@ -49,10 +49,21 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-weight: 700;
             font-size: 1.4rem;
             color: var(--text-main);
             letter-spacing: 1px;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
         }
 
         .logo span {
@@ -285,6 +296,34 @@
             background: var(--accent-glow);
         }
 
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery { grid-template-columns: 1fr; }
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--accent);
+        }
+
+        .mission-image {
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--accent);
+        }
+
         .vessel-view {
             width: 100%;
             height: 120px;
@@ -378,7 +417,7 @@
 
     <nav>
         <div class="nav-container">
-            <div class="logo">TSA<span>1173-1</span></div>
+            <div class="logo"><img src="./brain-logo.jpg" alt="">TSA<span>1173-1</span></div>
             <ul class="nav-links">
                 <li><button onclick="showPage('home')" id="btn-home" class="active">Home</button></li>
                 <li><button onclick="showPage('mission')" id="btn-mission">Our Mission</button></li>
@@ -403,6 +442,12 @@
                 <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines. Our proposal will aid in preventing addictive substances like fentanyl, heroin, and oxycodone from crossing the blood-brain barrier and triggering addiction or overdose.</p>
             </div>
 
+            <div class="image-gallery">
+                <img src="./molecular-biology.webp" alt="">
+                <img src="./bioconjugates-structure.jpg" alt="">
+                <img src="./bioconjugation-link.jpg" alt="">
+            </div>
+
             <h2>Multimedia Showcase Presentation</h2>
             <div class="video-container">
                 <iframe src="https://www.canva.com/design/DAHNQlsyFnI/6UdvTh5R9yXSDnZ2mif4cA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
@@ -411,6 +456,7 @@
 
         <section id="mission" class="page">
             <h1>Our <span>Mission Statement</span></h1>
+            <img src="./test-tubes.jpg" alt="" class="mission-image">
             <div class="card">
                 <p style="font-size: 1.4rem; font-style: italic; color: var(--text-main);">"To engineer high-precision, low-cost biochemical safeguards that defend biological functions against disruptive synthetic chemicals, redefining recovery through proactive immunotherapeutic solutions."</p>
             </div>
