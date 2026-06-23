@@ -311,7 +311,7 @@
             font-weight: bold;
         }
 
-        .particle {
+       .particle {
             position: absolute;
             width: 12px;
             height: 12px;
@@ -319,10 +319,21 @@
             animation: floatLeft 4s linear infinite;
         }
 
-        @keyframes floatLeft {
-            0% { left: -20px; }
-            100% { left: 100%; }
+        .particle.intercepted {
+             animation: floatBlocked 4s ease-out infinite;
         }
+
+@keyframes floatLeft {
+    0% { left: -20px; }
+    100% { left: 100%; }
+}
+
+@keyframes floatBlocked {
+    0% { left: -20px; opacity: 1; transform: scale(1); }
+    55% { left: 72%; opacity: 1; transform: scale(1); }
+    70% { left: 78%; opacity: 1; transform: scale(1.6); }
+    100% { left: 78%; opacity: 0; transform: scale(1.6); }
+}
 
         .ref-card p {
             font-family: monospace;
@@ -588,22 +599,23 @@
                     <button class="sim-btn" style="background:#f72585; color:white;" onclick="advanceSimulation(3)">Introduce Drug Particles</button>
                 `;
             }
-            else if(currentStep === 3) {
+                        else if(currentStep === 3) {
                 stage.innerText = "SIMULATION COMPLETE";
-                generateParticles('#f72585', 8);
+                generateParticles('#f72585', 8, true);
                 body.innerHTML = `
                     <h3 style="color:#00b4d8; margin-bottom:1rem;">Steric Hindrance Achieved!</h3>
-                    <p>The molecular complexes cannot traverse the blood-brain barrier tight junctions.</p>
+                    <p>Circulating antibodies bind the drug particles, forming bulky complexes too large to cross the blood-brain barrier tight junctions. The brain stays protected.</p>
                     <button class="sim-btn" onclick="resetSim()">Restart Research Lab</button>
                 `;
             }
         }
 
-        function generateParticles(color, count) {
+        function generateParticles(color, count, intercepted) {
             const animBox = document.getElementById('vessel-animation');
             for(let i=0; i<count; i++) {
                 let p = document.createElement('div');
                 p.classList.add('particle');
+                if(intercepted) p.classList.add('intercepted');
                 p.style.backgroundColor = color;
                 p.style.top = Math.random() * 80 + 10 + 'px';
                 p.style.animationDelay = Math.random() * 2 + 's';
