@@ -311,7 +311,7 @@
             font-weight: bold;
         }
 
-       .particle {
+        .particle {
             position: absolute;
             width: 12px;
             height: 12px;
@@ -319,21 +319,45 @@
             animation: floatLeft 4s linear infinite;
         }
 
-        .particle.intercepted {
-             animation: floatBlocked 4s ease-out infinite;
+        .particle.drug {
+            background: #f72585;
+            animation: drugApproach 2.4s linear forwards;
         }
 
-@keyframes floatLeft {
-    0% { left: -20px; }
-    100% { left: 100%; }
-}
+        .particle.antibody {
+            background: #00b4d8;
+            animation: antibodyApproach 2.1s linear forwards;
+        }
 
-@keyframes floatBlocked {
-    0% { left: -20px; opacity: 1; transform: scale(1); }
-    55% { left: 72%; opacity: 1; transform: scale(1); }
-    70% { left: 78%; opacity: 1; transform: scale(1.6); }
-    100% { left: 78%; opacity: 0; transform: scale(1.6); }
-}
+        .particle.complex {
+            width: 20px;
+            height: 20px;
+            background: #7209b7;
+            box-shadow: 0 0 10px #f72585, 0 0 10px #00b4d8;
+            animation: complexBlocked 2s ease-out forwards;
+        }
+
+        @keyframes floatLeft {
+            0% { left: -20px; }
+            100% { left: 100%; }
+        }
+
+        @keyframes drugApproach {
+            0% { left: -20px; }
+            100% { left: 48%; }
+        }
+
+        @keyframes antibodyApproach {
+            0% { left: -32px; }
+            100% { left: 48%; }
+        }
+
+        @keyframes complexBlocked {
+            0% { left: 48%; opacity: 1; transform: scale(1); }
+            30% { transform: scale(1.7); }
+            60% { left: 65%; opacity: 1; transform: scale(1.7); }
+            100% { left: 65%; opacity: 0; transform: scale(1.7); }
+        }
 
         .ref-card p {
             font-family: monospace;
@@ -536,19 +560,34 @@
             <p>Transitioning into preventative biochemistry requires intentional conversations concerning voluntary administration rights, standard distribution channels, and patient choice autonomy. Although these vaccines are still in development and not yet widely available, they represent a growing area of translational medicine with strong potential for future clinical use.</p>
         </section>
 
-        <section id="q&a" class="page active">
+        <section id="q&a" class="page">
             <h1>Frequently Asked <span>Questions and Answers</span></h1>
-            <p>Welcome to Team 1173-1's scientific portal. Modern biotechnology represents a profound shift from passive observation to high-precision manipulation of biological pathways. Technologies such as CRISPR gene editing can achieve up to 90-99% accuracy, while treatments like CAR-T therapy have produced remission rates near 80-90% in certain cancer patients, and mRNA vaccines moved from concept to deployment in under a year. Despite this, only about 10-15% of drugs that enter clinical trials are ultimately approved, and many advanced therapies cost over $100,000 per patient. Reliability, cost, and real-world effectiveness remain major open problems.</p>
-
-            <div class="card">
-                <h3>Our Core Project Focus</h3>
-                <p>This workspace details our analysis and engineering proposal for utilizing <strong>Bioconjugate Conjugation Chemistry</strong> to formulate next-generation anti-drug vaccines. Our proposal will aid in preventing addictive substances like fentanyl, heroin, and oxycodone from crossing the blood-brain barrier and triggering addiction or overdose.</p>
-            </div>
-
-            <h2>Multimedia Showcase Presentation</h2>
-            <div class="video-container">
-                <iframe src="https://www.canva.com/design/DAHNQlsyFnI/6UdvTh5R9yXSDnZ2mif4cA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-            </div>
+            <p><strong>1. What is a bioconjugate?</strong></p>
+            <p>A bioconjugate is a molecule that combines two or more distinct molecular entities, typically a therapeutic agent and a delivery vehicle, to create a more effective and targeted treatment.</p>
+            <p><strong>2. How does bioconjugation work?</strong></p>
+            <p>Bioconjugation involves the chemical linkage of a therapeutic molecule to a carrier protein or other delivery vehicle, enhancing its stability, immunogenicity, and targeting capabilities.</p>
+            <p><strong>3. What are the benefits of bioconjugation?</strong></p>
+            <p>Bioconjugation can improve drug efficacy, reduce side effects, and enable targeted delivery to specific cells or tissues, making treatments more effective and safer for patients.</p>
+            <p><strong>4. Are there any risks associated with bioconjugation?</strong></p>
+            <p>While bioconjugation can enhance treatment outcomes, potential risks include immune reactions, off-target effects, and challenges in manufacturing. Ongoing research aims to minimize these risks and improve the safety profile of bioconjugated therapies.</p>
+            <p><strong>5. How is bioconjugation being applied in the fight against addiction?</strong></p>
+            <p>Bioconjugation is being explored to create vaccines that elicit an immune response against addictive substances, preventing them from reaching the brain and reducing the risk of addiction and overdose.</p>
+            <p><strong>6. What is bioconjugation, and why does it matter for addiction treatment?</strong></p>
+            <p>Bioconjugation is a technique that combines a therapeutic molecule with a carrier protein or other delivery vehicle to enhance its stability, immunogenicity, and targeting capabilities. In the context of addiction treatment, this approach is being investigated to develop vaccines that can prevent addictive substances from reaching the brain and reduce the risk of addiction and overdose.</p>
+            <p><strong>7. Why was fentanyl chosen as the target drug?</strong></p>
+            <p>Fentanyl is responsible for the majority of opioid overdose deaths in the U.S. Its extreme potency and small molecular size make it an ideal hapten for conjugation with carrier proteins like CRM197 or KLH.</p>
+            <p><strong>8. What carrier proteins are used and why?</strong></p>
+            <p>Carrier proteins such as CRM197 and KLH are used because they can effectively present the hapten to the immune system, leading to the production of antibodies that can neutralize the addictive substance. Also, they are both well-established proteins used in existing approved vaccines. They are highly immunogenic, meaning they amplify the immune response to the attached drug molecule significantly.</p>
+            <p><strong>9. How does the antibody actually stop fentanyl from working?</strong></p>
+            <p>Antibodies bind to fentanyl molecules in the bloodstream and form complexes too large to cross the blood-brain barrier. This prevents fentanyl from reaching the mu-opioid receptors where it would cause euphoria or respiratory depression.</p>
+            <p><strong>10. Would this vaccine work against other opioids besides fentanyl?</strong></p>
+            <p>Antibodies are highly specific to the molecule they were raised against, so analogs like carfentanil may not be fully blocked. Next-generation designs aim to produce cross-reactive antibodies that cover a broader range of fentanyl analogs.</p>
+            <p><strong>11. Could someone just take a higher dose to override the antibodies?</strong></p>
+            <p> Theoretically, yes, since antibody sequestration has a saturation point. However, attempting to overwhelm the vaccine with a higher dose would dramatically increase overdose risk, making it a dangerous and largely self-defeating strategy.</p>
+            <p><strong>12. How long does immunity last after vaccination?</strong></p>
+            <p>Based on similar anti-drug vaccine trials, antibody levels typically peak around 6 to 8 weeks post-vaccination. Booster doses would likely be needed to maintain protection, and research into optimal dosing schedules is ongoing.</p>
+            <p><strong>13. Are there any risks of allergic or autoimmune reactions?</strong></p>
+            <p>The carrier proteins we use have established safety profiles from existing vaccine use. Because the immune response targets the drug hapten rather than any natural substance in the body, autoimmune risk is considered low, though clinical trials would be needed to confirm this.</p>
         </section>
     </div>
 
@@ -599,27 +638,57 @@
                     <button class="sim-btn" style="background:#f72585; color:white;" onclick="advanceSimulation(3)">Introduce Drug Particles</button>
                 `;
             }
-                        else if(currentStep === 3) {
+            else if(currentStep === 3) {
                 stage.innerText = "SIMULATION COMPLETE";
-                generateParticles('#f72585', 8, true);
+                generateInterceptionPairs(7);
                 body.innerHTML = `
                     <h3 style="color:#00b4d8; margin-bottom:1rem;">Steric Hindrance Achieved!</h3>
-                    <p>Circulating antibodies bind the drug particles, forming bulky complexes too large to cross the blood-brain barrier tight junctions. The brain stays protected.</p>
+                    <p>Injected antibodies, already circulating in the bloodstream, bind the drug particles, forming bulky antibody-drug complexes too large to cross the blood-brain barrier tight junctions. The brain stays protected.</p>
                     <button class="sim-btn" onclick="resetSim()">Restart Research Lab</button>
                 `;
             }
         }
 
-        function generateParticles(color, count, intercepted) {
+        function generateParticles(color, count) {
             const animBox = document.getElementById('vessel-animation');
             for(let i=0; i<count; i++) {
                 let p = document.createElement('div');
                 p.classList.add('particle');
-                if(intercepted) p.classList.add('intercepted');
                 p.style.backgroundColor = color;
                 p.style.top = Math.random() * 80 + 10 + 'px';
                 p.style.animationDelay = Math.random() * 2 + 's';
                 animBox.appendChild(p);
+            }
+        }
+
+        function generateInterceptionPairs(count) {
+            const animBox = document.getElementById('vessel-animation');
+            for(let i=0; i<count; i++){
+                const topPos = Math.random() * 80 + 10 + 'px';
+                const delay = Math.random() * 1.5;
+
+                const drug = document.createElement('div');
+                drug.classList.add('particle', 'drug');
+                drug.style.top = topPos;
+                drug.style.animationDelay = delay + 's';
+
+                const antibody = document.createElement('div');
+                antibody.classList.add('particle', 'antibody');
+                antibody.style.top = topPos;
+                antibody.style.animationDelay = (delay + 0.3) + 's';
+
+                animBox.appendChild(drug);
+                animBox.appendChild(antibody);
+
+                setTimeout(() => {
+                    drug.remove();
+                    antibody.remove();
+                    const complex = document.createElement('div');
+                    complex.classList.add('particle', 'complex');
+                    complex.style.top = topPos;
+                    animBox.appendChild(complex);
+                    setTimeout(() => complex.remove(), 2000);
+                }, (delay + 2.4) * 1000);
             }
         }
 
